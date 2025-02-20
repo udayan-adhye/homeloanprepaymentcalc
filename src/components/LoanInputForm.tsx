@@ -63,7 +63,7 @@ const LoanInputForm: React.FC<LoanInputFormProps> = ({ onSubmit }) => {
 
   return (
     <Box component="form" onSubmit={handleSubmit}>
-      <Stack spacing={3}>
+      <Stack spacing={{ xs: 2, sm: 3 }}>
         <Box>
           <Typography 
             variant="h5" 
@@ -72,7 +72,8 @@ const LoanInputForm: React.FC<LoanInputFormProps> = ({ onSubmit }) => {
               fontWeight: 600,
               display: 'flex',
               alignItems: 'center',
-              gap: 1
+              gap: 1,
+              fontSize: { xs: '1.25rem', sm: '1.5rem' }
             }}
           >
             Loan Details
@@ -82,7 +83,14 @@ const LoanInputForm: React.FC<LoanInputFormProps> = ({ onSubmit }) => {
               </IconButton>
             </Tooltip>
           </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+          <Typography 
+            variant="body2" 
+            color="text.secondary" 
+            sx={{ 
+              mb: { xs: 2, sm: 3 },
+              fontSize: { xs: '0.875rem', sm: '1rem' }
+            }}
+          >
             Fill in the details below to get started with your loan calculation
           </Typography>
         </Box>
@@ -100,10 +108,27 @@ const LoanInputForm: React.FC<LoanInputFormProps> = ({ onSubmit }) => {
           }}
           sx={{
             '& .MuiOutlinedInput-root': {
+              height: { xs: '56px', sm: '56px' },
+              fontSize: { xs: '1.125rem', sm: '1.1rem' },
+              backgroundColor: 'rgba(236, 252, 247, 0.6)',
               '&:hover fieldset': {
                 borderColor: 'primary.main',
               },
+              '& .MuiInputAdornment-root': {
+                '& p': {
+                  fontSize: { xs: '1.125rem', sm: '1.1rem' },
+                  color: 'text.primary',
+                }
+              }
             },
+            '& .MuiInputLabel-root': {
+              fontSize: { xs: '1rem', sm: '1rem' },
+              color: 'text.primary',
+              '&.Mui-focused': {
+                color: 'primary.main',
+              }
+            },
+            mb: { xs: 2, sm: 2 }
           }}
         />
 
@@ -121,10 +146,27 @@ const LoanInputForm: React.FC<LoanInputFormProps> = ({ onSubmit }) => {
           }}
           sx={{
             '& .MuiOutlinedInput-root': {
+              height: { xs: '56px', sm: '56px' },
+              fontSize: { xs: '1.125rem', sm: '1.1rem' },
+              backgroundColor: 'rgba(236, 252, 247, 0.6)',
               '&:hover fieldset': {
                 borderColor: 'primary.main',
               },
+              '& .MuiInputAdornment-root': {
+                '& p': {
+                  fontSize: { xs: '1.125rem', sm: '1.1rem' },
+                  color: 'text.primary',
+                }
+              }
             },
+            '& .MuiInputLabel-root': {
+              fontSize: { xs: '1rem', sm: '1rem' },
+              color: 'text.primary',
+              '&.Mui-focused': {
+                color: 'primary.main',
+              }
+            },
+            mb: { xs: 2, sm: 2 }
           }}
         />
 
@@ -142,25 +184,44 @@ const LoanInputForm: React.FC<LoanInputFormProps> = ({ onSubmit }) => {
           }}
           sx={{
             '& .MuiOutlinedInput-root': {
+              height: { xs: '56px', sm: '56px' },
+              fontSize: { xs: '1.125rem', sm: '1.1rem' },
+              backgroundColor: 'rgba(236, 252, 247, 0.6)',
               '&:hover fieldset': {
                 borderColor: 'primary.main',
               },
+              '& .MuiInputAdornment-root': {
+                '& p': {
+                  fontSize: { xs: '1.125rem', sm: '1.1rem' },
+                  color: 'text.primary',
+                }
+              }
             },
+            '& .MuiInputLabel-root': {
+              fontSize: { xs: '1rem', sm: '1rem' },
+              color: 'text.primary',
+              '&.Mui-focused': {
+                color: 'primary.main',
+              }
+            },
+            mb: { xs: 2, sm: 2 }
           }}
         />
 
         <Button
           type="submit"
           variant="contained"
+          fullWidth
           size="large"
           sx={{
-            mt: 2,
-            py: 1.5,
-            fontSize: '1rem',
+            mt: { xs: 2, sm: 2 },
+            height: { xs: '56px', sm: '56px' },
+            fontSize: { xs: '1.125rem', sm: '1.125rem' },
             fontWeight: 600,
             textTransform: 'none',
             backgroundImage: 'linear-gradient(135deg, #2E5CFF 0%, #7B3FE4 100%)',
             transition: 'all 0.3s ease-in-out',
+            borderRadius: '8px',
             '&:hover': {
               transform: 'translateY(-2px)',
               boxShadow: '0 6px 20px rgba(46, 92, 255, 0.3)',
